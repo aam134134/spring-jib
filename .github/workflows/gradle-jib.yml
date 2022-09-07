@@ -35,14 +35,14 @@ jobs:
         distribution: 'temurin'
   
     # Docker Login
-    - name: Log into registry ${{ env.REGISTRY }}
-      uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
-      with:
-        registry: ${{ env.REGISTRY }}
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+    #- name: Log into registry ${{ env.REGISTRY }}
+    #  uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
+    #  with:
+    #    registry: ${{ env.REGISTRY }}
+    #    username: ${{ github.actor }}
+    #    password: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Build and Push Docker Container
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: jib --image=ghcr.io/aam134134/spring-jib:1.0 --debug -Djib.serialize=true
+        arguments: jib -Djib.to.image==ghcr.io/aam134134/spring-jib:1.0 -Djib.to.auth.username=${{ github.actor }} -Djib.to.auth.password=${{ secrets.GITHUB_TOKEN }}
