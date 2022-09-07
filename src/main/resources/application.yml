@@ -1,0 +1,17 @@
+server:
+  context-path: /spring-flyway
+  port: 10011
+
+spring:
+  application:
+    name: spring-flyway
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
