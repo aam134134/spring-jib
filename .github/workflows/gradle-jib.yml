@@ -45,4 +45,4 @@ jobs:
     - name: Build and Push Docker Container
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
-        arguments: jib -Djib.to.image=ghcr.io/aam134134/spring-jib:1.0 -Djib.to.auth.username=${{ github.actor }} -Djib.to.auth.password=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
+        arguments: jib -Djib.to.image=ghcr.io/aam134134/spring-jib:1.0 -Djib.to.auth.username=${{ github.actor }} -Djib.to.auth.password=${{ secrets.GITHUB_TOKEN }}
