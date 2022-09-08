@@ -5,13 +5,3 @@ server:
 spring:
   application:
     name: spring-jib
-
-  jpa:
-    hibernate:
-      ddl-auto: none
-
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}

@@ -1,11 +1,11 @@
-package com.aam134134.springflyway;
+package com.aam134134.springjib;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringFlywayApplication {
+public class SpringJibApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringFlywayApplication.class, args);
+        SpringApplication.run(SpringJibApplication.class, args);
     }
 }
