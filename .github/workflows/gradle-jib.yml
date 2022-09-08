@@ -42,6 +42,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         
+    # Build Docker image and push to package repo
     - name: Build and Push Docker Container
       #run: ./gradlew jib --image=ghcr.io/aam134134/spring-jib:1.0
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
