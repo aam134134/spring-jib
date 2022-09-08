@@ -1,10 +1,10 @@
 server:
-  context-path: /spring-flyway
+  context-path: /spring-jib
   port: 10011
 
 spring:
   application:
-    name: spring-flyway
+    name: spring-jib
 
   jpa:
     hibernate:
